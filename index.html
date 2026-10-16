@@ -59,7 +59,7 @@
         <p class="authors">with R. Blundell, M. Costa Dias, G. Mazeine and C. Meghir</p>
         <p class="venue">Revise and resubmit, <i>Journal of Labor Economics</i></p>
         <div class="actions">
-          <a class="btn" href="https://doi.org/10.3386/w35861">NBER working paper</a>
+          <a class="btn" href="https://www.nber.org/papers/w35861">NBER working paper</a>
           <button class="btn abstract-toggle" type="button" aria-expanded="false">Abstract</button>
         </div>
         <div class="abstract" hidden><p>Work experience has been found to be a key determinant of work and wages for educated women, but it seems to play a smaller role for the less educated. For them, welfare, tax credits and family composition matter more, and increasingly so does participation in disability programmes. Here we document how labor supply, wages, health, and disability claims have evolved in the UK over the last three decades, and examine how reforms to tax credits, disability benefits and other welfare programs have changed work incentives over this period. We then introduce these features into an empirical dynamic structural model of life-cycle labor supply, human capital and disability benefit application, in which human capital combines health capital, experience accumulated in work, and education. Estimating the model on a panel of working-age women in the UK, we examine the interactions between experience capital and health capital in driving life-cycle earnings across different education groups. Our results highlight the importance of interactions in the disability benefit, welfare and tax-credit systems for understanding the life cycle pattern of hours, employment, earnings, and disability claims, and for evaluating policy counterfactuals.</p></div>
@@ -305,6 +305,12 @@
       btn.setAttribute('aria-expanded', String(!open));
       panel.hidden = open;
     });
+  });
+</script>
+<script>
+  // Open links to other websites in a new tab
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    if (a.hostname !== location.hostname) { a.target = '_blank'; a.rel = 'noopener'; }
   });
 </script>
 </body>
