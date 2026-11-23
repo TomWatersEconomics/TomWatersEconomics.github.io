@@ -3,9 +3,12 @@
 Static site hosted on GitHub Pages (TomWatersEconomics.github.io). Plain HTML/CSS, no build step, no framework. Keep it that way.
 
 ## Workflow
-- Claude edits files in this folder only. Tom reviews, commits and pushes with GitHub Desktop.
-- Do not run git commands (no commit, push, stash, checkout).
-- After editing, give Tom a short summary of what changed and in which file(s).
+- Claude edits and commits; Tom clicks "Push origin" in GitHub Desktop. (Cowork blocks git push from Claude's side, so don't try.)
+- Before the first commit in a session, request delete permission for this folder (git creates and deletes lock files).
+- Commit as: `git -c user.name=TomWatersEconomics -c user.email=88095619+TomWatersEconomics@users.noreply.github.com commit -m "..."`
+- Repo has `core.autocrlf=true` (Windows checkout, CRLF in working tree). Stage specific files, never `git add -A` blindly; check `git status` is clean apart from intended changes.
+- Run `git fetch` first; if behind origin, ask Tom to click "Pull origin" in GitHub Desktop before editing.
+- After committing, tell Tom which file(s) changed and to push.
 
 ## Files
 - `index.html` – Research page: intro, contact links, then papers in sections: Working papers, Work in progress, Published papers, Book chapters and invited papers, Resting papers.
